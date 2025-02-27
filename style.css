@@ -1,0 +1,116 @@
+/* === Reset styles === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* === General Page Styling === */
+body {
+    font-family: Arial, sans-serif;
+    background: #E4ECD7; /* Soft Greenish White */
+    color: #333333; /* Dark Gray */
+    text-align: center;
+}
+
+/* === Navigation Bar === */
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #57900E; /* Olive Green */
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Horizontal Menu */
+.menu {
+    list-style: none;
+    display: flex; /* Aligns menu items in a row */
+    gap: 20px;
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+.menu a:hover {
+    color: #FDD835; /* Golden Yellow on hover */
+}
+
+/* === Sections Styling === */
+section {
+    padding: 100px 20px;
+    margin-top: 60px; /* Adjust for fixed navbar */
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* === Buttons === */
+button {
+    background: #57900E; /* Olive Green */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #4B7F0C; /* Darker Olive Green */
+}
+
+/* === Footer === */
+footer {
+    background: #57900E; /* Olive Green */
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* === Responsive Design (For Mobile) === */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #57900E;
+        display: none;
+        padding: 10px 0;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu li {
+        text-align: center;
+        padding: 10px;
+        border-bottom: 1px solid white;
+    }
+}

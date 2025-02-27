@@ -1,0 +1,40 @@
+/* For Tablets (768px and above) */
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+    }
+}
+
+/* For Desktops (1024px and above) */
+@media (min-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr); /* Three columns */
+    }
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .menu li {
+        text-align: center;
+        padding: 10px;
+        border-bottom: 1px solid white;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
